@@ -1,5 +1,6 @@
 # Gurjas Dhillon
 # selection5.py
+# this program displays multiple currencies with their exchange rates. it asks the user to choose a currency and asks how much they want and converts it for them
 
 curs = { 
   "US" : 0.74807,

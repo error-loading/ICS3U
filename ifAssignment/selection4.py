@@ -1,3 +1,7 @@
+# Gurjas Dhillon
+# selection5.py
+# this program takes in factors as inputs and ranks pts with if statements based on how credible they are. at the end, the program outputs the final verdict for there card hopes
+
 age = int(input("How old are you? "))
 income = int(input("How much do you make annually? "))
 address = int(input("How long have you lived at your current address? "))

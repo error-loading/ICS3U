@@ -1,5 +1,6 @@
 # Gurjas Dhillon
 # selection5.py
+# displays a menu with different bus fares, asks the user to choose one of them and program displays the total cost
 
 # Without ifs
 
