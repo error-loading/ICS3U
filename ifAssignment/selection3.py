@@ -22,6 +22,8 @@ fares = {
   }
 }
 
+# outputs menu 
+
 print("Welcome to Transit Windsor! (This demo is without ifs)\n")
 for age in fares.keys():
   print(age)
@@ -36,6 +38,7 @@ while True:
   category = input("What is your age category? (Adults, Senior, or Student) ").strip()
   tickets = input("How many? (1, 10, Transit Pass) ")
 
+  # trys to access a certain key, if it isnt there, than ask the user to retry
   try:
     print(f"Price - {fares[category][tickets]}")
     break
@@ -49,6 +52,8 @@ print("Welcome to Transit Windsor! (This demo is with ifs)\n")
 category = input(
   "What is your age category? (Adults, Senior, or Student) ").strip()
 tickets = input("How many? (1, 10, Transit Pass) ")
+
+# check all possibilites, output accordingly
 
 if category == "Adults":
   if tickets == "1":

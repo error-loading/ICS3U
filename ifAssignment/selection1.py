@@ -4,7 +4,7 @@
 
 bearing = float(input("Enter your compass bearing: "))
 
-direction = ""
+direction = ""    # innitially set to empty string, then goes into conditions and assigns it a direction according to bearing
 
 if bearing >= 315 and bearing <= 360 or bearing >= 0 and bearing <= 45:
   direction = "North"

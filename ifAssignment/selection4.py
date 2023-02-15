@@ -7,6 +7,8 @@ income = int(input("How much do you make annually? "))
 address = int(input("How long have you lived at your current address? "))
 job = int(input("How long have you worked at your current job? "))
 
+# check all possibilities, add to pts accordingly, pts is an accumulator which decides the card limit at the end of the program
+
 pts = 0
 
 if age <= 20:
@@ -42,6 +44,8 @@ elif job <= 4:
   pts += 8
 else:
   pts += 15
+
+# check if user is credible using the pts accumulated with the factors
 
 if pts <= 20:
   print("No card")

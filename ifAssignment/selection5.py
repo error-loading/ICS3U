@@ -6,6 +6,8 @@ from random import randint
 
 print("Welcome to Soccer Trivia! You will be asked 10 questions and at the end, you will get a score out of 10. Good Luck")
 
+# store all the questions and answers in a dictionary
+
 questions = {
   1 : {
     "q" : "Who has the most ballon d'hors? ",
@@ -58,10 +60,11 @@ questions = {
   }
 }
 
-feedback = ["Close!", "Nice try!", "Nope.", "Try again!"]
-questionNum = 1
-ttl = 0
+feedback = ["Close!", "Nice try!", "Nope.", "Try again!"]    #this lists stores feedback phrases. the program will randomly generate an indice and choose a phrase from this lists
+questionNum = 1       #which questoins number we are one
+ttl = 0               # accumulator for the number of pts accumulated
 
+# loops up to 10, outputs the question, gets an answer from the user, decides if it is right or not and gives feedback
 while questionNum <= 10:
   userAns = input(f"Question {questionNum}: {questions[questionNum]['q']}").strip().lower()
   if userAns in questions[questionNum]['a']:
