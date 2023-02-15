@@ -1,3 +1,7 @@
+# Gurjas Dhillon
+# selection1.py
+# You enter a bearing and the program outputs the direction
+
 bearing = float(input("Enter your compass bearing: "))
 
 direction = ""

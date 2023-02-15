@@ -15,7 +15,11 @@ for keys in curs.keys():
     print(f"{curNum}.\t{keys}\t{curs[keys]}")
     curNum +=1
 
-userCur = input("Choose a currency to buy: ").strip()
+while True:
+    userCur = input("Choose a currency to buy: ").strip()
+    if userCur not in curs:
+        print("Something went wrong. Try again.")
+    else: break
 userNum = float(input("How much do you want to buy? "))
 converted = round(curs[userCur] * userNum, 2)
 print(f"It will cost you ${converted}.")
