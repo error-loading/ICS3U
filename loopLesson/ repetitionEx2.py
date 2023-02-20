@@ -7,4 +7,6 @@ for i in range(64):
     ttl += prev
     prev *= 2
 
-print(f"The king has to pay {ttl / 7000}lb of grain")
+print(f"The king has to pay {ttl / 7000}lbs of grain")
+print((2**64 - 1) / 7000)
+print(2**64)
