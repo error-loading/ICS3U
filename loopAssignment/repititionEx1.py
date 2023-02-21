@@ -1,5 +1,9 @@
+# Gurjas Dhillon
+# repititionEx1.py
+# This program continuosly asks the user for a password, if that password is equal to the stored password, the program outputs the number of attempts and the correct the password
+
 # Write  a  program  that  continues  to  ask  for  a  password  until  the  right  password  is  given,  then  gives  some comment.
-# Feb 19, 2023
+# Feb 21, 2023
 
 password = "testPass!123"
 attemps = 1
