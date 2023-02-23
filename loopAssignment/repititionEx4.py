@@ -11,5 +11,5 @@ for i in range(10, 100):
         num = per
         
     if ttl > 3:
-        print(i, ttl)
+        print(f"{i} has a persistance of {ttl}.")
         break
