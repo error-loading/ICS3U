@@ -13,4 +13,5 @@ while userAns != password:
     userAns = input("Wrong! Try again. ").strip()
     attemps +=1
 
-print(f"Password was {password}. It took you {attemps} try/trys")
+if attemps == 1: print(f"Password was {password}. It took you {attemps} try")
+else: print(f"Password was {password}. It took you {attemps} trys")

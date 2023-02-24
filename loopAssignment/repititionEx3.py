@@ -9,7 +9,8 @@ print('''
 3.Spring Surprise . . . . 1.99
 4.Fries . . . . . . . . . 1.29
 5.Pop . . . . . . . . . . 1.19
-6.Exit  --------------------------------
+6.Exit  
+--------------------------------
 ''')
       
 menu = {
@@ -20,17 +21,20 @@ menu = {
     5: 1.19
 }
 
-fries = False
+fries = False      #flag, become true if user chooses fries, it is later the conditional for asking the user if he wants fries
 ttl = 0
 
 user = int(input("What would you like? "))
 
 while user != 6:
-    ttl += menu[user]
-    if user == 5:
+    ttl += menu[user]    #increment the ttl by the price of them item
+    # If the user chooses 4 (fries), change fries to true
+    if user == 4:
         fries = True
     user = int(input("What would you like? "))
 
+
+# asks the user if he wants fries
 if not fries:
     user = input("Would you like any fries with that [y/n] ")
     if user == 'y':

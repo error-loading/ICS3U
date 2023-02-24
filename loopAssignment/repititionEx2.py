@@ -9,6 +9,7 @@ curPopulation = 8.017
 years = 0
 rate = 1.009
 
+# Checks if the population has doubled, then it will simulate one year by increasing the year counter and increasing the population by the rate
 while curPopulation < population * 2:
     years += 1
     curPopulation *= rate
