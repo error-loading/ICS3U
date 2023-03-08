@@ -1,28 +1,27 @@
-from random import choice
+# Gurjas Dhillon
+# listAssignment2.py
+# Names are entered, adds bye to the list if there is an odd number of ppl, output pairings for the tournament
 
-# names = []
-# name = input("Enter a name (0 to exit): ")
+from random import shuffle
 
-# while name != "0":
-#     names.append(name)
-#     name = input("Enter a name (0 to exit): ")
+names = []
+name = input("Enter a name (0 to exit): ")
 
-# if len(names) % 2 == 1: names.append("Bye")
+# whlie loop to enter the names, exits if the user inputs 0
+while name != "0":
+    names.append(name)
+    name = input("Enter a name (0 to exit): ")
 
-# shuffle(names)
-
-# for i in range(0, len(names), 2):
-#     print(f"Round {i//2 + 1}")
-#     print("-------------------")
-#     print(f"{names[i]:16} {names[i+1]:16}\n")
+# add 'bye' to the tournament if there is an odd number of participants
+if len(names) % 2 == 1: names.append("Bye")
 
 
-arr = [1,2,3,4]
+# shuffle the names list to get them in random order
+shuffle(names)
 
-while len(arr) > 0:
-    item1 = choice(arr)
-    arr.remove(item1)
-    item2 = choice(arr)
-    arr.remove(item2)
 
-    print(item1, item2)
+# loop in increments of two to output the names in pairs
+for i in range(0, len(names), 2):
+    print(f"Round {i//2 + 1}")
+    print("-------------------")
+    print(f"{names[i]:16} {names[i+1]:16}\n")

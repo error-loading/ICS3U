@@ -1,4 +1,10 @@
+# Gurjas Dhillon
+# listAssignment3.py
+# Trivia program to test the knowledge of prime ministers of the user
+
 from random import shuffle
+
+# ministers dictionary with all the info needed
 mininisters = {
     1 : {
         'name' : "macdonald",
@@ -121,6 +127,7 @@ mininisters = {
 
 }
 
+# get a list of integers from 1-29 and then shuffle them to get random indices for the trivia
 nums = list(range(1, 30))
 shuffle(nums)
 
@@ -129,16 +136,27 @@ print("Welcome to 'Another Trivia'!")
 cor = 0
 
 for i in range(10):
-    ind = nums[i]
+    ind = nums[i]     # get the index of the questions
     print(f"Question {i + 1}")
     print(f"No. {ind}")
     print(f"Date {mininisters[ind]['office']}")
-    user = input("What is the name of this prime minister? ").lower()
+    user = input("What is the name of this prime minister? ").lower()     
+
+    # if the users ans is correct, increment correct and output a msg, otherwise tell the user they are wrong and also output the right ans
     if user == mininisters[ind]['name']:
         cor += 1
         print("You are correct!")
     else:
         print(f"The answer was {mininisters[ind]['name'].title}. Better luck next time!")
 
-avg = cor * 10
-print(f"Average - {avg}%")
+avg = cor * 10     # calculating the avg
+
+# checking the ranges of the avg and outputting the appropriate msg
+if avg < 50:
+    print(f"Go back to history class. Average - {avg}%")
+elif avg < 60:
+    print(f"Close one! Average - {avg}%")
+elif avg < 70:
+    print(f"Decent score. Average - {avg}%")
+else:
+    print(f"Good job! Average - {avg}%")
