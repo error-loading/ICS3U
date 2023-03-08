@@ -9,6 +9,9 @@ for i in range(n):
     if prev in visited:
         print('Invalid')
         sys.exit()
+    if prev > n:
+        print('Invalid')
+        sys.exit()
 
     visited.append(prev)
     prev = graph[prev]
