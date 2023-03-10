@@ -11,7 +11,6 @@ prev = graph[0]        # variable for the last node visited
 
 for i in range(n):
     # if the prev node is in the visited array, then its an invalid round and it exits the program
-    print(prev, i)
     if prev in visited:
         print('Invalid')
         sys.exit()
