@@ -7,13 +7,13 @@ words = {}
 word = input("Enter a word (0 to exit) ")
 
 while word != "0":
-    pts = int(input("How much is the word worth? "))
+    pts = int(input("How much does the word worth? "))
     words[word] = pts          # Entering the words with their points in a dictionary
     word = input("Enter a word (0 to exit) ")
 
 ttl = sum(list(words.values()))           # getting the ttl sum of the points
 
-avg = ttl - len(words)         # calculating the avg
+avg = ttl / len(words)         # calculating the avg
 
 for x, y in words.items():      # for each loop 
     # checking if the score for the word is less than the avg

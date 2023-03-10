@@ -13,7 +13,8 @@ while name != "0":
     name = input("Enter a name (0 to exit): ")
 
 # add 'bye' to the tournament if there is an odd number of participants
-if len(names) % 2 == 1: names.append("Bye")
+if len(names) % 2 == 1:
+    names.append("Bye")
 
 
 # shuffle the names list to get them in random order
@@ -22,6 +23,6 @@ shuffle(names)
 
 # loop in increments of two to output the names in pairs
 for i in range(0, len(names), 2):
-    print(f"Round {i//2 + 1}")
+    print(f"Match {i//2 + 1}")
     print("-------------------")
-    print(f"{names[i]:16} {names[i+1]:16}\n")
+    print(f"{names[i]:13} {names[i+1]}\n")

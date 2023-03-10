@@ -138,7 +138,7 @@ cor = 0
 for i in range(10):
     ind = nums[i]     # get the index of the questions
     print(f"Question {i + 1}")
-    print(f"No. {ind}")
+    print(f"Term Number. {ind}")
     print(f"Date {mininisters[ind]['office']}")
     user = input("What is the name of this prime minister? ").lower()     
 
@@ -147,7 +147,7 @@ for i in range(10):
         cor += 1
         print("You are correct!")
     else:
-        print(f"The answer was {mininisters[ind]['name'].title}. Better luck next time!")
+        print(f"The answer was {mininisters[ind]['name'].title()}. Better luck next time!")
 
 avg = cor * 10     # calculating the avg
 
