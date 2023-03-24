@@ -11,24 +11,24 @@ running = True
 
 arr = []
 
+pressed = False
+
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        
     mx, my = pygame.mouse.get_pos()
     mb = pygame.mouse.get_pressed()
-
-
+    screen.fill((100, 0, 0))
 
     if mb[0]:
-        while not mb[0]:
-            screen.fill((100, 0, 0))
-            mx, my = pygame.mouse.get_pos()
-            pygame.draw.circle(screen, (0, 0, 255), (mx, my), 5)
-        arr.append((mx, my))
+        pygame.draw.circle(screen, (0, 0, 255), (mx, my), 5)
+        pressed = True
+    elif pressed:
+        pygame.draw.circle(screen, (0, 0, 255), (mx, my), 5)
+        pressed = False
 
-    for x, y in arr:
-        pygame.draw.circle(screen, (0, 0, 255), (x, y), 5)
 
 
     pygame.display.flip()
