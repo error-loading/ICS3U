@@ -20,13 +20,18 @@ while running:
         
     mx, my = pygame.mouse.get_pos()
     mb = pygame.mouse.get_pressed()
-    screen.fill((100, 0, 0))
+    screen.fill((255, 200, 200))
+
+    for x, y in arr:
+        pos = (x, y)
+        pygame.draw.circle(screen, (200, 200, 255), pos, 15)
 
     if mb[0]:
-        pygame.draw.circle(screen, (0, 0, 255), (mx, my), 5)
+        pygame.draw.circle(screen, (200, 200, 255), (mx, my), 15)
         pressed = True
     elif pressed:
-        pygame.draw.circle(screen, (0, 0, 255), (mx, my), 5)
+        pos = (mx, my)
+        arr.append(pos)
         pressed = False
 
 
