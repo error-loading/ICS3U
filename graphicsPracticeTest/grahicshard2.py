@@ -25,9 +25,14 @@ while running:
     if 300 < my < 300 + WIDTH//30:
         i = mx // 30
         box[i] = mcol
-    pygame.draw.circle(screen, mcol, (mx, my), 3)
     
     screen.fill((255, 255, 255))
+    if mcol == 0:
+        pygame.draw.circle(screen, (255, 255, 255), (mx, my), 3)
+    elif mcol == 1:
+        pygame.draw.circle(screen, (255, 0, 0), (mx, my), 3)
+    elif mcol == 2:
+        pygame.draw.circle(screen, (0, 255, 0), (mx, my), 3)
     for i in range(0, WIDTH, WIDTH//30):
         col = box[i % WIDTH//30]
         if col == 0:
