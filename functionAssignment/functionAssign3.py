@@ -11,20 +11,18 @@ def justify(list1, sz):
     
     avg = (sz - char) // (len(list1) - 1)
 
+    rem = sz - char - avg * (len(list1) - 1)
 
     sent = ""
 
-    for i in range(len(list1) - 1):
+    for i in range(len(list1)):
         sent += list1[i]
         sent += " " * avg
+
+        if rem > 0:
+            sent += " "
+            rem -= 1
     
-    rem = sz - char - avg * (len(list1) - 1)
-
-    print(rem)
-
-    sent += " " * rem
-
-    sent += list1[-1]
 
     return sent
 
