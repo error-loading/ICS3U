@@ -1,3 +1,9 @@
+'''
+Gurjas Dhillon
+funcAssign4.py
+functions that creates a grid based on the position, width and height of the grid, and the spacing for each line in the grid
+'''
+
 import pygame
 
 screen = pygame.display.set_mode((800, 600))
@@ -12,7 +18,7 @@ def grid(x, y, width, height, spacing, col):
     
 
 while running:
-    grid(100, 100, 150, 50, 10, (0, 255, 0))
+    grid(100, 100, 150, 50, 25, (0, 255, 0))
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
             running = False

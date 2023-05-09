@@ -1,3 +1,9 @@
+'''
+Gurjas Dhillon
+funcAssign1.py
+function that takes in a number and outputs the number of factors
+'''
+
 def numFactors(n):
     ttl = 0
 
