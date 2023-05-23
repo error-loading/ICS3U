@@ -9,7 +9,7 @@ def connect4(lst):
     for x in range(7):
         for y in range(7):
             for dx, dy in offset:
-                if get(lst, x + 0*dx, y + 0*dy) and get(lst, x + 1*dx, y + 1*dy) and get(lst, x + 2*dx, y + 2*dy) and get(lst, x + 3*dx, y + 3*dy) and get(lst, x + 0*dx, y + 0*dy) == get(lst, x + 1*dx, y + 1*dy) == get(lst, x + 2*dx, y + 2*dy) == get(lst, x + 3*dx, y + 3*dy):
+                if get(lst, x + 0*dx, y + 0*dy) and get(lst, x + 3*dx, y + 3*dy) and get(lst, x + 0*dx, y + 0*dy) == get(lst, x + 1*dx, y + 1*dy) == get(lst, x + 2*dx, y + 2*dy) == get(lst, x + 3*dx, y + 3*dy):
                     return True
     
     return False
